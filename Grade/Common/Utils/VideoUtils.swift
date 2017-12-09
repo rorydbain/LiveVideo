@@ -119,5 +119,36 @@ struct VideoUtils {
             completion(mainVideoURL!)
         }
     }
+    
+    static func loopAsset(_ asset: AVAsset, iterations: Int = 2, completion: @escaping (URL) -> Void) {
+        let composition = AVMutableComposition()
+        var lastTime: CMTime = kCMTimeZero
+        let videoCompositionTrack = composition.addMutableTrack(withMediaType: AVMediaTypeVideo,
+                                                                preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
+        
+        (0..<iterations).forEach { _ in
+            do {
+                try videoCompositionTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, asset.duration),
+                                                          of: asset.tracks(withMediaType: AVMediaTypeVideo)[0] ,
+                                                          at: lastTime)
+                lastTime = CMTimeAdd(lastTime, asset.duration)
+            } catch {
+                print("Failed to insert track")
+            }
+        }
+        
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let mainVideoURL = path?.appendingPathComponent("joined.mov")
+        unlink(mainVideoURL?.path)
+        
+        guard let exporter = AVAssetExportSession(asset: composition,
+                                                  presetName: AVAssetExportPresetHighestQuality) else { return }
+        exporter.outputURL = mainVideoURL
+        exporter.outputFileType = AVFileTypeQuickTimeMovie
+        
+        exporter.exportAsynchronously {
+            completion(mainVideoURL!)
+        }
+    }
 
 }

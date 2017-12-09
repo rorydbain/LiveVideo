@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,10 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        MSAppCenter.start("9e06cd3e-5fe6-4897-a635-48bca43ba0a7", withServices:[
+            MSAnalytics.self,
+            MSCrashes.self
+            ])
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         let navigationController = UINavigationController(rootViewController: PhotoFeedModule.build())
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
+        
+        
         return true
     }
 

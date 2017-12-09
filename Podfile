@@ -8,5 +8,6 @@ target 'Grade' do
   pod 'PureLayout'
   pod 'GPUImage'
   pod 'SwiftLint'
+  pod 'AppCenter'
 
 end
