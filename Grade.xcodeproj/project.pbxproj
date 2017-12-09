@@ -460,7 +460,7 @@
 				DEVELOPMENT_TEAM = BR7TEH7C27;
 				INFOPLIST_FILE = Grade/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rorybain.Grade;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rorydbain.Grade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -474,7 +474,7 @@
 				DEVELOPMENT_TEAM = BR7TEH7C27;
 				INFOPLIST_FILE = Grade/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rorybain.Grade;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rorydbain.Grade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
