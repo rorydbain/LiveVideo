@@ -216,7 +216,7 @@
 				TargetAttributes = {
 					E24A35D71ED1E528001A2720 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = U52UAJ4AUQ;
+						DevelopmentTeam = BR7TEH7C27;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -457,7 +457,7 @@
 			baseConfigurationReference = 786B64ECCEB20004476DEA35 /* Pods-Grade.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U52UAJ4AUQ;
+				DEVELOPMENT_TEAM = BR7TEH7C27;
 				INFOPLIST_FILE = Grade/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rorybain.Grade;
@@ -471,7 +471,7 @@
 			baseConfigurationReference = 98637355179A38289C9AD340 /* Pods-Grade.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U52UAJ4AUQ;
+				DEVELOPMENT_TEAM = BR7TEH7C27;
 				INFOPLIST_FILE = Grade/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rorybain.Grade;
